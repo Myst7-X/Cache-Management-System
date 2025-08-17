@@ -1,0 +1,35 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Cache Simulator</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Cache Simulator</h1>
+
+    <section>
+        <input type="file" id="file-upload">
+        <input type="number" id="ttl" placeholder="TTL in seconds" value="60">
+        <button id="upload-button">Upload</button>
+    </section>
+
+    <section>
+        <h2>Cached Files</h2>
+        <div class="cache-panel">
+            <!-- Filled by JS -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Cache Performance</h2>
+        <canvas id="hitsChart" width="400" height="200"></canvas>
+        <canvas id="filesChart" width="400" height="200"></canvas>
+    </section>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
